@@ -1,0 +1,41 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+$body-bg:#fdd41a;
+$green:#008000;
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+header{
+    background-color: $body-bg;
+    img{
+        max-width: 100%;
+    }
+
+    nav{
+        background-color: $white;
+    }
+
+}
+
+.card{
+    
+    background-color: $green;
+
+    img{
+        max-width: 202px;
+    }
+
+    &--button{
+        @extend .card;
+        background-color: $danger;
+        color: $white;
+        border: none;
+        border-radius: 0.2rem;
+    }
+
+}
